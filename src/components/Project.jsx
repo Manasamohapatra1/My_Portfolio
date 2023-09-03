@@ -17,7 +17,7 @@ const Projects = () => {
         {
             id: 2,
             src: gallery,
-            demoHref: "https://my-moment.netlify.app", // Replace with your actual demo URL
+            demoHref: "https://my-moments.netlify.app", // Replace with your actual demo URL
             codeHref: "https://github.com/Manasamohapatra1/mygallery.github.io",
             child: (
                 <p className="text-center  text-gray-300 text-sm p-3">A gallery-website containing images captured by me using html and css only. </p>
