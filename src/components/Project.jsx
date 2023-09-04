@@ -38,7 +38,7 @@ const Projects = () => {
         {
             id: 4,
             src: Timer,
-            demoHref: "h https://manasamohapatra1.github.io/timer.github.io/",
+            demoHref: " https://manasamohapatra1.github.io/timer.github.io/",
             codeHref: "https://github.com/Manasamohapatra1/timer.github.io",
             child: (
                 <p className="text-center text-gray-300 text-sm p-3">A responsive Stopwatch and timer website using js,css and html. </p>
