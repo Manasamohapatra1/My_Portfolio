@@ -31,7 +31,7 @@ const NavBar = () => {
     ];
 
     return (
-        <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed ">
+        <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed z-20">
             <div>
                 <img className="object-scale-down h-16 w-56" src={HeroImage} alt="" />
             </div>
@@ -40,7 +40,7 @@ const NavBar = () => {
                 {links.map(({ id, link }) => (
                     <li
                         key={id}
-                        className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200"
+                        className="px-4 cursor-pointer text-2xl capitalize font-medium text-gray-500 hover:scale-105 duration-200"
                     >
 
                         <Link to={link} smooth duration={500}>
@@ -64,7 +64,7 @@ const NavBar = () => {
                     {links.map(({ id, link }) => (
                         <li
                             key={id}
-                            className="px-4 cursor-pointer capitalize py-6 text-4xl"
+                            className="px-4 cursor-pointer capitalize py-6 text-3xl"
                         >
 
                             <Link onClick={() => setNav(!nav)}

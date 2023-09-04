@@ -2,13 +2,16 @@ import React from "react";
 import anime from "../Assets/anime.jpg";
 import gallery from "../Assets/gallery.jpg";
 import FoodApp from "../Assets/Food.png";
+import Timer from "../Assets/trial.jpg";
+import Portfolio from "../Assets/portfolio.png";
+import calculator from "../Assets/calcula.jpg";
 
 const Projects = () => {
     const project = [
         {
             id: 1,
             src: anime,
-            demoHref: "https://anime-saga.netlify.app", // Replace with your actual demo URL
+            demoHref: "https://anime-saga.netlify.app",
             codeHref: "https://github.com/Manasamohapatra1/Anime-Web-App",
             child: (
                 <p className="text-center  text-gray-300 text-sm p-3">A fully responsive anime-website using html,css and javascript.And the datas are fetched from jikan api. </p>
@@ -17,7 +20,7 @@ const Projects = () => {
         {
             id: 2,
             src: gallery,
-            demoHref: "https://my-moments.netlify.app", // Replace with your actual demo URL
+            demoHref: "https://my-moments.netlify.app",
             codeHref: "https://github.com/Manasamohapatra1/mygallery.github.io",
             child: (
                 <p className="text-center  text-gray-300 text-sm p-3">A gallery-website containing images captured by me using html and css only. </p>
@@ -26,10 +29,37 @@ const Projects = () => {
         {
             id: 3,
             src: FoodApp,
-            demoHref: "https://github.com/Manasamohapatra1/foodApp", // Replace with your actual demo URL
+            demoHref: "https://github.com/Manasamohapatra1/foodApp",
             codeHref: "https://github.com/Manasamohapatra1/foodApp",
             child: (
                 <p className="text-center text-gray-300 text-sm p-3">A android food app containing functional onboarding pages. Currently working on to make it fully functional. </p>
+            ),
+        },
+        {
+            id: 4,
+            src: Timer,
+            demoHref: "https://github.com/Manasamohapatra1/foodApp",
+            codeHref: "https://github.com/Manasamohapatra1/foodApp",
+            child: (
+                <p className="text-center text-gray-300 text-sm p-3">A responsive Stopwatch and timer website using js,css and html. </p>
+            ),
+        },
+        {
+            id: 5,
+            src: Portfolio,
+            demoHref: "https://github.com/Manasamohapatra1/foodApp",
+            codeHref: "https://github.com/Manasamohapatra1/foodApp",
+            child: (
+                <p className="text-center text-gray-300 text-sm p-3">A fully functional responsive portfolio website using framework like React.js and Tailwind css. </p>
+            ),
+        },
+        {
+            id: 6,
+            src: calculator,
+            demoHref: "https://github.com/Manasamohapatra1/foodApp",
+            codeHref: "https://github.com/Manasamohapatra1/foodApp",
+            child: (
+                <p className="text-center text-gray-300 text-sm p-3">A simple calculator using javascript, html and css. </p>
             ),
         },
     ];
@@ -45,7 +75,7 @@ const Projects = () => {
     return (
         <div
             name="project"
-            className="bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen"
+            className="bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-full"
         >
             <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
                 <div className="pb-8">
