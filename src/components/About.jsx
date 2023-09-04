@@ -14,7 +14,7 @@ const About = () => {
                 </div>
 
                 <p className="text-lg mt-20">
-                    I am Manasa Mohapatra, a Betech undergraduate in the department of Electrical Engineering. But I have a keen interest in software developement.
+                    I am Manasa Mohapatra, a Btech undergraduate in the department of Electrical Engineering. But I have a keen interest in software developement.
                     Currently I am learning DSA along with full stack web developement.I also have interest in app developement. In the future I want to explore different domains and grasp more
                     knowledge about it.
 
