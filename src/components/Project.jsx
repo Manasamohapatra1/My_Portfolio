@@ -4,7 +4,7 @@ import gallery from "../Assets/gallery.jpg";
 import FoodApp from "../Assets/Food.png";
 
 const Projects = () => {
-    const portfolios = [
+    const project = [
         {
             id: 1,
             src: anime,
@@ -44,7 +44,7 @@ const Projects = () => {
     };
     return (
         <div
-            name="portfolio"
+            name="project"
             className="bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen"
         >
             <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
@@ -56,7 +56,7 @@ const Projects = () => {
                 </div>
 
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-                    {portfolios.map(({ id, src, child, demoHref, codeHref }) => (
+                    {project.map(({ id, src, child, demoHref, codeHref }) => (
                         <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
                             <img
                                 src={src}

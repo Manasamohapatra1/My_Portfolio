@@ -1,6 +1,7 @@
 import React from "react";
 import HeroImage from "../Assets/mp.jpg";
 
+
 // import { Link } from "react-scroll";
 
 const Home = () => {
