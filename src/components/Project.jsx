@@ -38,8 +38,8 @@ const Projects = () => {
         {
             id: 4,
             src: Timer,
-            demoHref: "https://github.com/Manasamohapatra1/foodApp",
-            codeHref: "https://github.com/Manasamohapatra1/foodApp",
+            demoHref: "h https://manasamohapatra1.github.io/timer.github.io/",
+            codeHref: "https://github.com/Manasamohapatra1/timer.github.io",
             child: (
                 <p className="text-center text-gray-300 text-sm p-3">A responsive Stopwatch and timer website using js,css and html. </p>
             ),
@@ -47,8 +47,8 @@ const Projects = () => {
         {
             id: 5,
             src: Portfolio,
-            demoHref: "https://github.com/Manasamohapatra1/foodApp",
-            codeHref: "https://github.com/Manasamohapatra1/foodApp",
+            demoHref: "http://my-portfolio-f01a6zkl8-manasamohapatra1.vercel.app",
+            codeHref: "https://github.com/Manasamohapatra1/My_Portfolio",
             child: (
                 <p className="text-center text-gray-300 text-sm p-3">A fully functional responsive portfolio website using framework like React.js and Tailwind css. </p>
             ),
@@ -56,8 +56,8 @@ const Projects = () => {
         {
             id: 6,
             src: calculator,
-            demoHref: "https://github.com/Manasamohapatra1/foodApp",
-            codeHref: "https://github.com/Manasamohapatra1/foodApp",
+            demoHref: "https://manasamohapatra1.github.io/calculator/",
+            codeHref: "https://github.com/Manasamohapatra1/calculator",
             child: (
                 <p className="text-center text-gray-300 text-sm p-3">A simple calculator using javascript, html and css. </p>
             ),
