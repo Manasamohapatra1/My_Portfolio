@@ -1,25 +1,28 @@
 {
   "files": {
-    "main.css": "/My_Portfolio/static/css/main.5553bcc4.css",
-    "main.js": "/My_Portfolio/static/js/main.67ae1d2a.js",
-    "static/media/Food.png": "/My_Portfolio/static/media/Food.499cc5c3323e4c9bfa04.png",
-    "static/media/anime.jpg": "/My_Portfolio/static/media/anime.265f152138a19a09d310.jpg",
-    "static/media/mp.jpg": "/My_Portfolio/static/media/mp.2340874b1c4e6680bf80.jpg",
-    "static/media/gallery.jpg": "/My_Portfolio/static/media/gallery.49ee312942f6257c1802.jpg",
-    "static/media/c.png": "/My_Portfolio/static/media/c.faa67b97f574421ee841.png",
-    "static/media/bootsrap.png": "/My_Portfolio/static/media/bootsrap.f132cb791703420e69ca.png",
-    "static/media/css.png": "/My_Portfolio/static/media/css.8890515968c8df2fec4a.png",
-    "static/media/tailwind.png": "/My_Portfolio/static/media/tailwind.6d6a4313b97e16837614.png",
-    "static/media/my-logo.png": "/My_Portfolio/static/media/my-logo.99ab86e5e470233fe191.png",
-    "static/media/cplus.png": "/My_Portfolio/static/media/cplus.24a8f93854ab092f17a7.png",
-    "static/media/html5.png": "/My_Portfolio/static/media/html5.3d4e1b35909d7111f208.png",
-    "static/media/js.png": "/My_Portfolio/static/media/js.3dfb665e058d08c99f28.png",
-    "index.html": "/My_Portfolio/index.html",
-    "main.5553bcc4.css.map": "/My_Portfolio/static/css/main.5553bcc4.css.map",
-    "main.67ae1d2a.js.map": "/My_Portfolio/static/js/main.67ae1d2a.js.map"
+    "main.css": "./static/css/main.1cfff4f0.css",
+    "main.js": "./static/js/main.c00c43be.js",
+    "static/media/Food.png": "./static/media/Food.499cc5c3323e4c9bfa04.png",
+    "static/media/portfolio.png": "./static/media/portfolio.dce147074a4ae7697aa1.png",
+    "static/media/anime.jpg": "./static/media/anime.265f152138a19a09d310.jpg",
+    "static/media/mp.jpg": "./static/media/mp.2340874b1c4e6680bf80.jpg",
+    "static/media/gallery.jpg": "./static/media/gallery.49ee312942f6257c1802.jpg",
+    "static/media/c.png": "./static/media/c.faa67b97f574421ee841.png",
+    "static/media/bootsrap.png": "./static/media/bootsrap.f132cb791703420e69ca.png",
+    "static/media/css.png": "./static/media/css.8890515968c8df2fec4a.png",
+    "static/media/calcula.jpg": "./static/media/calcula.b361a7ac8632e538efc0.jpg",
+    "static/media/tailwind.png": "./static/media/tailwind.6d6a4313b97e16837614.png",
+    "static/media/my-logo.png": "./static/media/my-logo.99ab86e5e470233fe191.png",
+    "static/media/cplus.png": "./static/media/cplus.24a8f93854ab092f17a7.png",
+    "static/media/html5.png": "./static/media/html5.3d4e1b35909d7111f208.png",
+    "static/media/trial.jpg": "./static/media/trial.5e42bda34e6828a631c7.jpg",
+    "static/media/js.png": "./static/media/js.3dfb665e058d08c99f28.png",
+    "index.html": "./index.html",
+    "main.1cfff4f0.css.map": "./static/css/main.1cfff4f0.css.map",
+    "main.c00c43be.js.map": "./static/js/main.c00c43be.js.map"
   },
   "entrypoints": [
-    "static/css/main.5553bcc4.css",
-    "static/js/main.67ae1d2a.js"
+    "static/css/main.1cfff4f0.css",
+    "static/js/main.c00c43be.js"
   ]
 }
