@@ -1,85 +1,59 @@
-import React, { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+// src/components/NavBar.jsx
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import ThemeContext from "../theme/ThemeContext";
 import HeroImage from "../Assets/my-logo.png";
-import { Link } from "react-scroll";
-
+import { FiMoon, FiSun } from "react-icons/fi";
 
 const NavBar = () => {
-    const [nav, setNav] = useState(false);
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
-    const links = [
-        {
-            id: 1,
-            link: "home",
-        },
-        {
-            id: 2,
-            link: "about",
-        },
-        {
-            id: 3,
-            link: "project",
-        },
-        {
-            id: 4,
-            link: "skill",
-        },
-        {
-            id: 5,
-            link: "contact",
-        },
-    ];
+  return (
+    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed z-20">
+      <div>
+        <img className="object-scale-down h-16 w-56" src={HeroImage} alt="" />
+      </div>
 
-    return (
-        <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed z-20">
-            <div>
-                <img className="object-scale-down h-16 w-56" src={HeroImage} alt="" />
-            </div>
+      <ul className="hidden md:flex">
+        <Link to="/">
+          <li className="px-4 cursor-pointer text-2xl capitalize font-medium text-gray-500 hover:scale-105 duration-200">
+            Home
+          </li>
+        </Link>
+        <Link to="/about">
+          <li className="px-4 cursor-pointer text-2xl capitalize font-medium text-gray-500 hover:scale-105 duration-200">
+            About
+          </li>
+        </Link>
+        <Link to="/skill">
+          <li className="px-4 cursor-pointer text-2xl capitalize font-medium text-gray-500 hover:scale-105 duration-200">
+            Skill
+          </li>
+        </Link>
+        <Link to="/project">
+          <li className="px-4 cursor-pointer text-2xl capitalize font-medium text-gray-500 hover:scale-105 duration-200">
+            Projects
+          </li>
+        </Link>
+        <Link to="/contactme">
+          <li className="px-4 cursor-pointer text-2xl capitalize font-medium text-gray-500 hover:scale-105 duration-200">
+            Contact
+          </li>
+        </Link>
+      </ul>
 
-            <ul className="hidden md:flex">
-                {links.map(({ id, link }) => (
-                    <li
-                        key={id}
-                        className="px-4 cursor-pointer text-2xl capitalize font-medium text-gray-500 hover:scale-105 duration-200"
-                    >
-
-                        <Link to={link} smooth duration={500}>
-                            {link}
-                        </Link>
-
-
-                    </li>
-                ))}
-            </ul>
-
-            <div
-                onClick={() => setNav(!nav)}
-                className="cursor-pointer pr-4 z-10 text-gray-500 md:hidden"
-            >
-                {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
-            </div>
-
-            {nav && (
-                <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
-                    {links.map(({ id, link }) => (
-                        <li
-                            key={id}
-                            className="px-4 cursor-pointer capitalize py-6 text-3xl"
-                        >
-
-                            <Link onClick={() => setNav(!nav)}
-                                to={link}
-                                smooth
-                                duration={500}>
-                                {link}
-                            </Link>
-
-                        </li>
-                    ))}
-                </ul>
-            )}
-        </div>
-    );
+      <button
+        onClick={toggleTheme}
+        className="text-2xl px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200"
+      >
+        {theme === "light" ? (
+          <FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
+        ) : (
+          <FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
+        )}
+      </button>
+    </div>
+  );
 };
 
 export default NavBar;
