@@ -48,9 +48,9 @@ const Home = () => {
               I&apos;m Manasa
             </h1>
             <div className="flex flex-row items-start md:items-center gap-1">
-              <h2 className="text-base font-bold md:text-2xl">I am into</h2>
+              <h2 className="text-sm font-bold md:text-2xl">I am into</h2>
               <TypeAnimation
-                className="text-violet-700  text-base md:text-2xl font-bold "
+                className="text-violet-700  text-sm md:text-2xl font-bold "
                 sequence={[
                   "Frontend developement",
                   1000,

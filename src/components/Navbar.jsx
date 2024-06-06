@@ -30,29 +30,29 @@ const NavBar = () => {
       </div>
 
       {/* Desktop Menu */}
-      <ul className="hidden md:flex">
+      <ul className="hidden md:flex md:font-bold">
         <Link to="/">
-          <li className="px-4 cursor-pointer text-2xl capitalize font-medium hover:scale-105 duration-200">
+          <li className="px-4 cursor-pointer text-2xl capitalize font-semibold hover:scale-105 duration-200">
             Home
           </li>
         </Link>
         <Link to="/about">
-          <li className="px-4 cursor-pointer text-2xl capitalize font-medium hover:scale-105 duration-200">
+          <li className="px-4 cursor-pointer text-2xl capitalize font-semibold hover:scale-105 duration-200">
             About
           </li>
         </Link>
         <Link to="/skill">
-          <li className="px-4 cursor-pointer text-2xl capitalize font-medium hover:scale-105 duration-200">
+          <li className="px-4 cursor-pointer text-2xl capitalize font-semibold hover:scale-105 duration-200">
             Skill
           </li>
         </Link>
         <Link to="/project">
-          <li className="px-4 cursor-pointer text-2xl capitalize font-medium hover:scale-105 duration-200">
+          <li className="px-4 cursor-pointer text-2xl capitalize font-semibold hover:scale-105 duration-200">
             Projects
           </li>
         </Link>
         <Link to="/contactme">
-          <li className="px-4 cursor-pointer text-2xl capitalize font-medium hover:scale-105 duration-200">
+          <li className="px-4 cursor-pointer text-2xl capitalize font-semibold hover:scale-105 duration-200">
             Contact
           </li>
         </Link>
