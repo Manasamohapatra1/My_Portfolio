@@ -90,7 +90,7 @@ const Projects = () => {
     window.open(codeHref, "_blank");
   };
   return (
-    <div name="project" className=" w-full md:h-full">
+    <div name="project" className=" w-full h-full md:h-full">
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <motion.div
           initial={{ opacity: 0, y: -180 }}

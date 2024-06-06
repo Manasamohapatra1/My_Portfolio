@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <div name="about" className="w-full h-full flex-wrap  object-contain">
+    <div name="about" className="w-full h-full flex-wrap ">
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
         <motion.div
           initial={{ opacity: 0, y: -180 }}
@@ -18,7 +18,7 @@ const About = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
-          className=" text-base md:text-lg font-semibold mt-8"
+          className=" text-base md:text-lg font-medium mt-8"
         >
           Hello! I'm Manasa Mohapatra, an Electrical Engineering undergraduate
           with a strong interest in software development. I specialize in
