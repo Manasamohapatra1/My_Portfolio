@@ -47,14 +47,14 @@ const Home = () => {
             <h1 className=" text-4xl  md:text-6xl font-extrabold relative">
               I&apos;m Manasa
             </h1>
-            <div className="flex flex-row items-start md:items-center gap-1.5">
+            <div className="flex flex-row items-start md:items-center gap-1">
               <h2 className="text-base font-bold md:text-2xl">I am into</h2>
               <TypeAnimation
                 className="text-violet-700  text-base md:text-2xl font-bold "
                 sequence={[
                   "Frontend developement",
                   1000,
-                  "Full Stack Developement",
+                  "Full-Stack Developement",
                   1000,
                   "App Developement",
                   1000,
@@ -65,7 +65,7 @@ const Home = () => {
               />
             </div>
 
-            <h3 className="text-sm lg:text-base font-semibold md:text-base text-gray-600 dark:text-gray-300">
+            <h3 className="text-sm lg:text-base font-semibold md:text-base">
               I'm a passionate and dedicated front-end web developer with a
               knack for creating dynamic, user-friendly websites and
               applications. I thrive in collaborative environments, constantly
