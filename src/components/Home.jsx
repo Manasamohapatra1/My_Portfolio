@@ -40,7 +40,7 @@ const Home = () => {
                 height={35}
                 src={wavingHand}
               />
-              <p className="text-xl font-medium md:text-xl mt-2 md:mt-1.5">
+              <p className="text-xl font-semibold md:text-xl mt-2 md:mt-1.5">
                 Hey
               </p>
             </div>
