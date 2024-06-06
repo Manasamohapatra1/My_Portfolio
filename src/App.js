@@ -62,8 +62,8 @@ function App() {
     <div
       className={`min-h-screen ${
         theme === "dark"
-          ? "bg-gradient-to-t from-[#076162] to-[#0c3068]"
-          : "bg-lightBackground"
+          ? "bg-gradient-to-t from-[#1c3a5f] to-[#011940] text-white"
+          : "bg-gradient-to-t from-[#edf3f3] to-[#badeb1] text-black"
       }`}
     >
       <SocialLinks />

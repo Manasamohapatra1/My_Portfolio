@@ -1,57 +1,118 @@
-// src/components/NavBar.jsx
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import ThemeContext from "../theme/ThemeContext";
 import HeroImage from "../Assets/my-logo.png";
-import { FiMoon, FiSun } from "react-icons/fi";
+import { FiMoon, FiSun, FiMenu, FiX } from "react-icons/fi";
 
 const NavBar = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
-    <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed z-20">
-      <div>
-        <img className="object-scale-down h-16 w-56" src={HeroImage} alt="" />
+    <div className="flex justify-between md:bg-transparent bg-gray-800  items-center w-full h-10 md:h-20 fixed z-20">
+      <div className="ml-8">
+        <img
+          className="object-scale-down h-8 md:h-16"
+          src={HeroImage}
+          alt="Logo"
+        />
       </div>
 
+      {/* Desktop Menu */}
       <ul className="hidden md:flex">
         <Link to="/">
-          <li className="px-4 cursor-pointer text-2xl capitalize font-medium text-gray-500 hover:scale-105 duration-200">
+          <li className="px-4 cursor-pointer text-2xl capitalize font-medium hover:scale-105 duration-200">
             Home
           </li>
         </Link>
         <Link to="/about">
-          <li className="px-4 cursor-pointer text-2xl capitalize font-medium text-gray-500 hover:scale-105 duration-200">
+          <li className="px-4 cursor-pointer text-2xl capitalize font-medium hover:scale-105 duration-200">
             About
           </li>
         </Link>
         <Link to="/skill">
-          <li className="px-4 cursor-pointer text-2xl capitalize font-medium text-gray-500 hover:scale-105 duration-200">
+          <li className="px-4 cursor-pointer text-2xl capitalize font-medium hover:scale-105 duration-200">
             Skill
           </li>
         </Link>
         <Link to="/project">
-          <li className="px-4 cursor-pointer text-2xl capitalize font-medium text-gray-500 hover:scale-105 duration-200">
+          <li className="px-4 cursor-pointer text-2xl capitalize font-medium hover:scale-105 duration-200">
             Projects
           </li>
         </Link>
         <Link to="/contactme">
-          <li className="px-4 cursor-pointer text-2xl capitalize font-medium text-gray-500 hover:scale-105 duration-200">
+          <li className="px-4 cursor-pointer text-2xl capitalize font-medium hover:scale-105 duration-200">
             Contact
           </li>
         </Link>
       </ul>
 
+      {/* Mobile Menu Icon */}
+      <div className="md:hidden flex items-center mr-8">
+        <button onClick={toggleMenu} className="text-2xl cursor-pointer">
+          {isOpen ? <FiX /> : <FiMenu />}
+        </button>
+      </div>
+
+      {/* Theme Toggle Button */}
       <button
         onClick={toggleTheme}
-        className="text-2xl px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200"
+        className="hidden md:block text-2xl px-4 cursor-pointer capitalize font-medium hover:scale-105 duration-200 mr-8"
       >
         {theme === "light" ? (
-          <FiSun className="text-gray-200 hover:text-gray-50 text-xl" />
+          <FiSun className="hover: text-xl" />
         ) : (
-          <FiMoon className="text-ternary-dark hover:text-gray-400 dark:text-ternary-light dark:hover:text-primary-light text-xl" />
+          <FiMoon className="dark:text-ternary-light dark:hover:text-primary-light text-xl" />
         )}
       </button>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <ul className="flex flex-col items-center absolute top-20 left-0 w-full bg-gray-900 md:hidden">
+          <Link to="/" onClick={toggleMenu}>
+            <li className="py-4 cursor-pointer text-2xl capitalize font-medium hover:scale-105 duration-200">
+              Home
+            </li>
+          </Link>
+          <Link to="/about" onClick={toggleMenu}>
+            <li className="py-4 cursor-pointer text-2xl capitalize font-medium hover:scale-105 duration-200">
+              About
+            </li>
+          </Link>
+          <Link to="/skill" onClick={toggleMenu}>
+            <li className="py-4 cursor-pointer text-2xl capitalize font-medium hover:scale-105 duration-200">
+              Skill
+            </li>
+          </Link>
+          <Link to="/project" onClick={toggleMenu}>
+            <li className="py-4 cursor-pointer text-2xl capitalize font-medium hover:scale-105 duration-200">
+              Projects
+            </li>
+          </Link>
+          <Link to="/contactme" onClick={toggleMenu}>
+            <li className="py-4 cursor-pointer text-2xl capitalize font-medium hover:scale-105 duration-200">
+              Contact
+            </li>
+          </Link>
+          <button
+            onClick={() => {
+              toggleTheme();
+              toggleMenu();
+            }}
+            className="py-4 text-2xl cursor-pointer capitalize font-medium hover:scale-105 duration-200"
+          >
+            {theme === "light" ? (
+              <FiSun className="hover:text-gray-50 text-xl" />
+            ) : (
+              <FiMoon className="dark:text-ternary-light dark:hover:text-primary-light text-xl" />
+            )}
+          </button>
+        </ul>
+      )}
     </div>
   );
 };
