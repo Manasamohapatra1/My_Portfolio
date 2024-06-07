@@ -1,8 +1,11 @@
 import React from "react";
 import Contactme from "../Assets/contact.png";
 import { motion } from "framer-motion";
+import ThemeContext from "../theme/ThemeContext";
+import { useContext } from "react";
 
 const Contact = () => {
+  const { theme } = useContext(ThemeContext);
   return (
     <div name="contact" className="w-full h-full p-4">
       <div className="flex flex-col p-4 justify-between max-w-screen-lg mx-auto h-full">
@@ -36,19 +39,25 @@ const Contact = () => {
               type="text"
               name="name"
               placeholder="Enter your name"
-              className="p-2  border-2 rounded-md focus:outline-none"
+              className={` p-2 bg-transparent border-2 rounded-md focus:outline-none ${
+                theme === "light" ? "border-black" : "border-white"
+              }`}
             />
             <input
               type="text"
               name="email"
               placeholder="Enter your email"
-              className="my-4 p-2  border-2 rounded-md focus:outline-none"
+              className={`my-4 p-2 bg-transparent border-2 rounded-md focus:outline-none ${
+                theme === "light" ? "border-black" : "border-white"
+              }`}
             />
             <textarea
               name="message"
               placeholder="Enter your message"
               rows="8"
-              className="p-2  border-2 rounded-md focus:outline-none"
+              className={`p-2 bg-transparent border-2 rounded-md focus:outline-none ${
+                theme === "light" ? "border-black" : "border-white"
+              }`}
             ></textarea>
 
             <button className="bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
