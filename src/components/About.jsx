@@ -34,7 +34,7 @@ const About = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
-          className="md:mt-6"
+          className="md:mt-[0.5rem]"
         >
           <p className=" text-2xl md:text-3xl text-orange-500  font-bold inline ">
             Education:

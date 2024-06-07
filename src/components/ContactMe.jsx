@@ -54,7 +54,7 @@ const Contact = () => {
             <textarea
               name="message"
               placeholder="Enter your message"
-              rows="8"
+              rows="7"
               className={`p-2 bg-transparent border-2 rounded-md focus:outline-none ${
                 theme === "light" ? "border-black" : "border-white"
               }`}
