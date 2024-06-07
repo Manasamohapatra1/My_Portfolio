@@ -9,7 +9,7 @@ const About = () => {
           initial={{ opacity: 0, y: -180 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
-          className="mt-[6.5rem]"
+          className="mt-[6rem]"
         >
           <p className="text-4xl md:text-5xl text-center font-bold ">About</p>
         </motion.div>
@@ -18,7 +18,7 @@ const About = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
-          className=" text-base md:text-lg font-medium mt-8"
+          className=" text-base md:text-lg font-medium mt-[1.8rem]"
         >
           Hello! I'm Manasa Mohapatra, an Electrical Engineering undergraduate
           with a strong interest in software development. I specialize in

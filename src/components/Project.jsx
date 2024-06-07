@@ -4,7 +4,7 @@ import gallery from "../Assets/gallery.jpg";
 import FoodApp from "../Assets/Food.png";
 import Timer from "../Assets/trial.jpg";
 import Portfolio from "../Assets/portfolio.png";
-import calculator from "../Assets/calcula.jpg";
+import calculator from "../Assets/calulator-hand-760.jpg";
 import { motion } from "framer-motion";
 
 const Projects = () => {
@@ -96,7 +96,7 @@ const Projects = () => {
           initial={{ opacity: 0, y: -180 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
-          className="pt-6 mt-[6rem]"
+          className="mt-[6rem]"
         >
           <p className="text-4xl md:text-5xl text-center font-bold  ">
             Projects

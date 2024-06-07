@@ -13,13 +13,13 @@ const Contact = () => {
           initial={{ opacity: 0, y: -180 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
-          className="text-4xl text-center mt-[6rem]   font-bold "
+          className="text-4xl text-center mt-[5.6rem]   font-bold "
         >
-          Contact
+          Contact Me
         </motion.p>
         {/* <p className="py-6">Submit the form below to get in touch with me</p> */}
 
-        <div className="md:flex md:justify-between  md:mt-[4rem]">
+        <div className="md:flex md:justify-between  md:mt-[3.2rem]">
           <motion.img
             initial={{ opacity: 0, x: -180 }}
             animate={{ opacity: 1, x: 0 }}

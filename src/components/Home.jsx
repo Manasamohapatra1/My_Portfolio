@@ -10,12 +10,12 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <section className="w-full h-full p-4">
-      <div className="flex-wrap flex  md:flex-row  mt-[3.8rem] md:mt-40 items-center">
+      <div className="flex-wrap flex  md:flex-row  mt-[3.8rem] md:mt-[6.5rem] items-center">
         <motion.div
           initial={{ opacity: 0, y: -180 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ ease: "easeInOut", duration: 0.9, delay: 0.2 }}
-          className=" p-4 w-[100%] md:w-[55%] m-auto"
+          className=" p-4 w-[100%] md:w-[47%] m-auto"
         >
           <img
             src={HeroImage}
@@ -29,7 +29,7 @@ const Home = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ ease: "easeInOut", duration: 1.2, delay: 0.4 }}
-          className=" p-4 w-[100%] lg:w-[45%] m-auto "
+          className=" p-4 w-[100%] lg:w-[53%] m-auto "
         >
           <div className="m-auto flex flex-col gap-5 md:gap-6 text-left lg:w-full 2xl:w-full mx-4 md:mx-6 xl:mx-0">
             <div className="flex items-center gap-1">
