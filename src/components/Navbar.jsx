@@ -1,6 +1,6 @@
 // src/components/NavBar.jsx
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+// Removed Link import
 import ThemeContext from "../theme/ThemeContext";
 import HeroImage from "../Assets/my-logo.png";
 import { FiMoon, FiSun, FiMenu, FiX } from "react-icons/fi";
@@ -15,8 +15,10 @@ const NavBar = () => {
 
   return (
     <div
-      className={`flex justify-between items-center w-full h-20 fixed z-20 ${
-        theme === "light" ? "bg-white text-black" : "bg-gray-900 text-white"
+      className={`flex justify-between items-center w-full h-20 fixed top-0 z-50 transition-colors duration-700 ${
+        theme === "light" 
+          ? "bg-[#ffffff]/80 backdrop-blur-lg text-[#0a0a0a] shadow-sm" 
+          : "bg-[#0a0a0a]/80 backdrop-blur-lg text-[#ffffff] border-b border-white/5"
       }`}
     >
       <div className="ml-8">
@@ -31,31 +33,31 @@ const NavBar = () => {
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex md:font-bold">
-        <Link to="/">
+        <a href="#home">
           <li className="px-4 cursor-pointer text-2xl capitalize font-semibold hover:scale-105 duration-200">
             Home
           </li>
-        </Link>
-        <Link to="/about">
+        </a>
+        <a href="#about">
           <li className="px-4 cursor-pointer text-2xl capitalize font-semibold hover:scale-105 duration-200">
             About
           </li>
-        </Link>
-        <Link to="/skill">
+        </a>
+        <a href="#skill">
           <li className="px-4 cursor-pointer text-2xl capitalize font-semibold hover:scale-105 duration-200">
             Skill
           </li>
-        </Link>
-        <Link to="/project">
+        </a>
+        <a href="#project">
           <li className="px-4 cursor-pointer text-2xl capitalize font-semibold hover:scale-105 duration-200">
             Projects
           </li>
-        </Link>
-        <Link to="/contactme">
+        </a>
+        <a href="#contactme">
           <li className="px-4 cursor-pointer text-2xl capitalize font-semibold hover:scale-105 duration-200">
             Contact
           </li>
-        </Link>
+        </a>
       </ul>
 
       {/* Theme Toggle Button for Mobile */}
@@ -82,35 +84,37 @@ const NavBar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <ul
-          className={`flex flex-col items-center absolute top-20 left-0 w-full ${
-            theme === "light" ? "bg-white text-black" : "bg-gray-900 text-white"
+          className={`flex flex-col items-center absolute top-20 left-0 w-full transition-colors duration-700 ${
+            theme === "light" 
+              ? "bg-[#ffffff]/95 backdrop-blur-xl text-[#0a0a0a]" 
+              : "bg-[#0a0a0a]/95 backdrop-blur-xl text-[#ffffff]"
           } md:hidden`}
         >
-          <Link to="/" onClick={toggleMenu}>
+          <a href="#home" onClick={toggleMenu}>
             <li className="py-4 cursor-pointer text-2xl capitalize font-medium hover:scale-105 duration-200">
               Home
             </li>
-          </Link>
-          <Link to="/about" onClick={toggleMenu}>
+          </a>
+          <a href="#about" onClick={toggleMenu}>
             <li className="py-4 cursor-pointer text-2xl capitalize font-medium hover:scale-105 duration-200">
               About
             </li>
-          </Link>
-          <Link to="/skill" onClick={toggleMenu}>
+          </a>
+          <a href="#skill" onClick={toggleMenu}>
             <li className="py-4 cursor-pointer text-2xl capitalize font-medium hover:scale-105 duration-200">
               Skill
             </li>
-          </Link>
-          <Link to="/project" onClick={toggleMenu}>
+          </a>
+          <a href="#project" onClick={toggleMenu}>
             <li className="py-4 cursor-pointer text-2xl capitalize font-medium hover:scale-105 duration-200">
               Projects
             </li>
-          </Link>
-          <Link to="/contactme" onClick={toggleMenu}>
+          </a>
+          <a href="#contactme" onClick={toggleMenu}>
             <li className="py-4 cursor-pointer text-2xl capitalize font-medium hover:scale-105 duration-200">
               Contact
             </li>
-          </Link>
+          </a>
           <button
             onClick={() => {
               toggleTheme();

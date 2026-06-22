@@ -8,14 +8,7 @@
   html {
     font-family: 'Poppins', sans-serif;
     font-family: 'Raleway', sans-serif;
+    scroll-behavior: smooth;
   }
 
-  .dark .bg-lightBackground {
-    background-color: rgba(7, 97, 98, 1);
-    background: linear-gradient(0deg, rgb(104, 245, 247) 0%, rgb(3, 39, 97) 100%);
-  }
-  
-  .bg-lightBackground {
-    background-color: white;
-  }
 }
