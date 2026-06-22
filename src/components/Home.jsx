@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import HeroImage from "../Assets/portfolio_nobg.png";
+import ResumePdf from "../Assets/Resume_Manasa_Mohapatra.pdf";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { IoIosArrowRoundForward } from "react-icons/io";
@@ -110,12 +111,13 @@ const Home = () => {
 
           <motion.div variants={fadeUp} className="flex items-center gap-6">
             <a
-              href="#project"
+              href={ResumePdf}
+              download="Resume_Manasa_Mohapatra.pdf"
               className="group relative px-8 py-4 bg-[#0a0a0a] dark:bg-white text-white dark:text-[#0a0a0a] font-bold text-sm md:text-base rounded-full overflow-hidden shadow-lg hover:shadow-yellow-400/25 transition-all duration-300"
             >
               <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-yellow-400 to-yellow-500 dark:from-yellow-400 dark:to-[#eaff00] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <span className="relative flex items-center gap-2 group-hover:text-[#ffffff] dark:group-hover:text-[#0a0a0a] transition-colors duration-300">
-                View Projects <IoIosArrowRoundForward className="text-2xl group-hover:translate-x-2 transition-transform duration-300" />
+                Download Resume <IoIosArrowRoundForward className="text-2xl group-hover:translate-x-2 transition-transform duration-300" />
               </span>
             </a>
             
@@ -128,27 +130,42 @@ const Home = () => {
           </motion.div>
         </motion.div>
 
-        {/* Right: Clean Editorial Image */}
+        {/* Right: Pristine Image Alignment & Minimalist Accent */}
         <motion.div 
           initial="hidden"
           animate="visible"
           variants={slowReveal}
-          className="w-full md:w-[45%] flex justify-center relative h-[45vh] md:h-[75vh]"
+          className="w-full md:w-[45%] flex justify-center items-center relative mt-8 md:mt-0"
         >
-          {/* Subtle glow behind the portrait itself */}
+          {/* Subtle ambient glow to separate the image from the deep background */}
           <motion.div 
-            animate={{ scale: [1, 1.05, 1], opacity: [0.5, 0.8, 0.5] }}
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] h-[60%] bg-yellow-400/10 dark:bg-[#eaff00]/10 rounded-full blur-[80px] z-0"
-          />
-          
-          <motion.img
-            animate={{ y: [0, -15, 0] }}
+            animate={{ scale: [1, 1.05, 1], opacity: [0.3, 0.5, 0.3] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            src={HeroImage}
-            alt="Manasa"
-            className="w-full h-full object-contain md:object-cover object-bottom drop-shadow-2xl transition-transform duration-1000 z-10"
+            className="absolute top-[40%] left-1/2 -translate-x-1/2 w-[60%] aspect-square bg-yellow-400/10 dark:bg-[#eaff00]/5 rounded-full blur-[80px] pointer-events-none z-0"
           />
+
+          {/* Sleek Vertical Typography Accent (Premium Editorial Vibe) */}
+          <div className="absolute -right-8 md:-right-12 top-1/2 -translate-y-1/2 hidden md:block z-0 pointer-events-none">
+            <p className="[writing-mode:vertical-lr] text-[#111827]/30 dark:text-white/20 text-[10px] md:text-xs font-mono tracking-[0.4em] uppercase">
+              PORTFOLIO // EST. 2026
+            </p>
+          </div>
+
+          {/* Wrapper to perfectly bound the brackets to the original untouched image size */}
+          <motion.div
+            className="relative w-[85%] md:w-[95%] max-w-[400px] md:max-w-full z-10 flex justify-center group"
+          >
+            {/* Minimalist UI Brackets strictly bound to the image edges */}
+            <div className="absolute top-[5%] left-0 w-12 h-12 border-t-[2px] border-l-[2px] border-[#111827]/30 dark:border-[#eaff00]/40 transition-all duration-700 group-hover:-translate-x-2 group-hover:-translate-y-2 z-20 pointer-events-none"></div>
+            <div className="absolute bottom-0 right-0 w-12 h-12 border-b-[2px] border-r-[2px] border-[#111827]/30 dark:border-[#eaff00]/40 transition-all duration-700 group-hover:translate-x-2 group-hover:translate-y-2 z-20 pointer-events-none"></div>
+
+            {/* Pure, perfectly aligned image exactly as requested */}
+            <img
+              src={HeroImage}
+              alt="Manasa"
+              className="w-full h-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
+            />
+          </motion.div>
         </motion.div>
       </div>
     </section>
