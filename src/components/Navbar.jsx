@@ -1,6 +1,6 @@
 // src/components/NavBar.jsx
 import React, { useContext, useState } from "react";
-// Removed Link import
+import { Link } from "react-scroll";
 import ThemeContext from "../theme/ThemeContext";
 import HeroImage from "../Assets/my-logo.png";
 import { FiMoon, FiSun, FiMenu, FiX } from "react-icons/fi";
@@ -33,31 +33,31 @@ const NavBar = () => {
 
       {/* Desktop Menu */}
       <ul className="hidden md:flex md:font-bold">
-        <a href="#home">
+        <Link to="home" smooth={true} duration={600} offset={0}>
           <li className="px-4 cursor-pointer text-2xl capitalize font-semibold hover:scale-105 duration-200">
             Home
           </li>
-        </a>
-        <a href="#about">
+        </Link>
+        <Link to="about" smooth={true} duration={600} offset={0}>
           <li className="px-4 cursor-pointer text-2xl capitalize font-semibold hover:scale-105 duration-200">
             About
           </li>
-        </a>
-        <a href="#skill">
+        </Link>
+        <Link to="skill" smooth={true} duration={600} offset={0}>
           <li className="px-4 cursor-pointer text-2xl capitalize font-semibold hover:scale-105 duration-200">
             Skill
           </li>
-        </a>
-        <a href="#project">
+        </Link>
+        <Link to="project" smooth={true} duration={600} offset={0}>
           <li className="px-4 cursor-pointer text-2xl capitalize font-semibold hover:scale-105 duration-200">
             Projects
           </li>
-        </a>
-        <a href="#contactme">
+        </Link>
+        <Link to="contactme" smooth={true} duration={600} offset={0}>
           <li className="px-4 cursor-pointer text-2xl capitalize font-semibold hover:scale-105 duration-200">
             Contact
           </li>
-        </a>
+        </Link>
       </ul>
 
       {/* Theme Toggle Button for Mobile */}
@@ -90,31 +90,31 @@ const NavBar = () => {
               : "bg-[#0a0a0a]/95 backdrop-blur-xl text-[#ffffff]"
           } md:hidden`}
         >
-          <a href="#home" onClick={toggleMenu}>
+          <Link to="home" smooth={true} duration={600} offset={0} onClick={toggleMenu}>
             <li className="py-4 cursor-pointer text-2xl capitalize font-medium hover:scale-105 duration-200">
               Home
             </li>
-          </a>
-          <a href="#about" onClick={toggleMenu}>
+          </Link>
+          <Link to="about" smooth={true} duration={600} offset={0} onClick={toggleMenu}>
             <li className="py-4 cursor-pointer text-2xl capitalize font-medium hover:scale-105 duration-200">
               About
             </li>
-          </a>
-          <a href="#skill" onClick={toggleMenu}>
+          </Link>
+          <Link to="skill" smooth={true} duration={600} offset={0} onClick={toggleMenu}>
             <li className="py-4 cursor-pointer text-2xl capitalize font-medium hover:scale-105 duration-200">
               Skill
             </li>
-          </a>
-          <a href="#project" onClick={toggleMenu}>
+          </Link>
+          <Link to="project" smooth={true} duration={600} offset={0} onClick={toggleMenu}>
             <li className="py-4 cursor-pointer text-2xl capitalize font-medium hover:scale-105 duration-200">
               Projects
             </li>
-          </a>
-          <a href="#contactme" onClick={toggleMenu}>
+          </Link>
+          <Link to="contactme" smooth={true} duration={600} offset={0} onClick={toggleMenu}>
             <li className="py-4 cursor-pointer text-2xl capitalize font-medium hover:scale-105 duration-200">
               Contact
             </li>
-          </a>
+          </Link>
           <button
             onClick={() => {
               toggleTheme();

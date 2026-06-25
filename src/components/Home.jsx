@@ -73,17 +73,19 @@ const Home = () => {
             </p>
           </motion.div>
 
-          <motion.h1 variants={fadeUp} className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] mb-6 text-[#0a0a0a] dark:text-[#ffffff]">
-            Hello, I'm <br />
-            <motion.span 
-              animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-              transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-              className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 via-yellow-300 to-yellow-500 dark:from-[#facc15] dark:via-[#fef08a] dark:to-[#facc15]"
-              style={{ backgroundSize: "200% auto" }}
-            >
-              MANASA
-            </motion.span>
-          </motion.h1>
+          <motion.div variants={fadeUp} className="mb-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#0a0a0a] dark:text-white tracking-tight leading-tight">
+              Hello, I'm <br className="hidden md:block" />
+              <motion.span 
+                animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+                className="mt-2 inline-block text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 via-yellow-200 to-yellow-500 dark:from-[#eaff00] dark:via-white dark:to-[#eaff00]"
+                style={{ backgroundSize: "200% auto" }}
+              >
+                Manasa Mohapatra
+              </motion.span>
+            </h1>
+          </motion.div>
 
           <motion.div variants={fadeUp} className="text-xl md:text-2xl lg:text-3xl font-bold text-[#0a0a0a]/80 dark:text-[#ffffff]/80 mb-8">
             <span className="mr-3">I specialize in</span>
@@ -105,15 +107,28 @@ const Home = () => {
             />
           </motion.div>
 
-          <motion.p variants={fadeUp} className="text-base md:text-lg lg:text-xl font-normal text-[#0a0a0a]/70 dark:text-[#ffffff]/70 leading-relaxed max-w-lg mb-10">
-            A passionate Software Developer crafting seamless digital experiences. While my core expertise lies in frontend and full-stack development, I am actively expanding my skill set into the world of Data Engineering.
-          </motion.p>
+          {/* Smooth Pure CSS Infinite Tech Marquee */}
+          <motion.div variants={fadeUp} className="w-full relative mt-6 mb-12 overflow-hidden flex">
+            <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-white dark:from-[#0a0a0a] to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-white dark:from-[#0a0a0a] to-transparent z-10 pointer-events-none"></div>
+            
+            <div className="animate-smooth-marquee whitespace-nowrap">
+              {['React.js', 'Node.js', 'Express', 'C++', 'Python', 'SQL', 'Pandas', 'Next.js', 'Tailwind CSS', 'React.js', 'Node.js', 'Express', 'C++', 'Python', 'SQL', 'Pandas', 'Next.js', 'Tailwind CSS'].map((tech, i) => (
+                <div key={i} className="flex items-center mx-4 md:mx-6">
+                  <span className="text-yellow-500 dark:text-[#eaff00] text-sm mr-4 md:mr-6 opacity-60">✦</span>
+                  <span className="text-base md:text-lg font-bold font-mono tracking-widest text-[#0a0a0a]/60 dark:text-white/60">
+                    {tech}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
 
           <motion.div variants={fadeUp} className="flex items-center gap-6">
             <a
               href={ResumePdf}
               download="Resume_Manasa_Mohapatra.pdf"
-              className="group relative px-8 py-4 bg-[#0a0a0a] dark:bg-white text-white dark:text-[#0a0a0a] font-bold text-sm md:text-base rounded-full overflow-hidden shadow-lg hover:shadow-yellow-400/25 transition-all duration-300"
+              className="group relative px-8 py-4 bg-[#0a0a0a] dark:bg-white text-white dark:text-[#0a0a0a] font-bold text-sm md:text-base rounded-full overflow-hidden shadow-[0_0_20px_rgba(234,255,0,0)] hover:shadow-[0_0_30px_rgba(234,255,0,0.4)] transition-all duration-300 transform hover:-translate-y-1"
             >
               <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-yellow-400 to-yellow-500 dark:from-yellow-400 dark:to-[#eaff00] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <span className="relative flex items-center gap-2 group-hover:text-[#ffffff] dark:group-hover:text-[#0a0a0a] transition-colors duration-300">
@@ -123,9 +138,10 @@ const Home = () => {
             
             <a
               href="#contactme"
-              className="text-sm md:text-base font-bold text-[#0a0a0a]/80 dark:text-[#ffffff]/80 hover:text-yellow-600 dark:hover:text-[#eaff00] transition-colors"
+              className="relative text-sm md:text-base font-bold text-[#0a0a0a]/80 dark:text-[#ffffff]/80 hover:text-yellow-600 dark:hover:text-[#eaff00] transition-colors duration-300 group"
             >
               Let's Talk
+              <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-yellow-400 dark:bg-[#eaff00] transition-all duration-300 group-hover:w-full"></span>
             </a>
           </motion.div>
         </motion.div>
