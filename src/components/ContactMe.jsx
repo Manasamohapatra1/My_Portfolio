@@ -4,7 +4,7 @@ import { FaEnvelope, FaMapMarkerAlt, FaPaperPlane } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <section name="contact" className="relative w-full min-h-screen flex flex-col justify-center px-6 md:px-12 overflow-hidden py-28">
+    <section name="contact" className="relative w-full min-h-screen flex flex-col justify-center px-6 md:px-12 overflow-hidden pt-24 pb-8">
       
       {/* Background Ambience */}
       <div className="absolute top-[10%] left-[10%] w-[300px] h-[300px] bg-yellow-400/5 dark:bg-[#eaff00]/5 rounded-full blur-[120px] pointer-events-none z-0"></div>
@@ -13,7 +13,7 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto w-full relative z-10 flex flex-col lg:flex-row gap-12 lg:gap-20 items-center lg:items-stretch">
         
         {/* Left Column: Header & Info */}
-        <div className="w-full lg:w-1/2 flex flex-col justify-center">
+        <div className="w-full lg:w-1/2 flex flex-col justify-start">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -42,7 +42,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-xs font-mono text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-1">Email</p>
-                  <p className="text-sm font-bold text-[#0a0a0a] dark:text-white">manasamohapatra.2001@gmail.com</p>
+                  <p className="text-sm font-bold text-[#0a0a0a] dark:text-white">mohapatramanasa1@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-center gap-4 group cursor-default">
@@ -65,7 +65,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-white/60 dark:bg-[#111827]/60 backdrop-blur-xl p-8 lg:p-10 rounded-3xl border border-gray-100 dark:border-white/5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.12)] w-full relative"
+            className="bg-white/60 dark:bg-[#111827]/60 backdrop-blur-xl p-6 lg:p-8 rounded-3xl border border-gray-100 dark:border-white/5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.12)] w-full max-w-lg mx-auto relative"
           >
             {/* Inner Glow */}
             <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/5 to-transparent dark:from-[#eaff00]/5 rounded-3xl pointer-events-none"></div>
@@ -73,44 +73,44 @@ const Contact = () => {
             <form
               action="https://getform.io/f/460c4e2e-ea53-4745-a6a5-a355d18d3b28"
               method="POST"
-              className="relative z-10 flex flex-col gap-6"
+              className="relative z-10 flex flex-col gap-4"
             >
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-1.5">
                 <label className="text-[10px] md:text-xs font-bold text-[#0a0a0a]/80 dark:text-[#ffffff]/80 uppercase tracking-wider">Your Name</label>
                 <input
                   type="text"
                   name="name"
                   placeholder="John Doe"
                   required
-                  className="w-full bg-gray-50/50 dark:bg-[#0a0a0a]/50 text-[#0a0a0a] dark:text-white p-3.5 md:p-4 text-sm md:text-base rounded-xl border border-gray-200 dark:border-white/10 focus:outline-none focus:border-yellow-400 dark:focus:border-[#eaff00] focus:ring-1 focus:ring-yellow-400 dark:focus:ring-[#eaff00] transition-all placeholder:text-gray-400 dark:placeholder:text-gray-600"
+                  className="w-full bg-gray-50/50 dark:bg-[#0a0a0a]/50 text-[#0a0a0a] dark:text-white p-3 md:p-3.5 text-xs md:text-sm rounded-xl border border-gray-200 dark:border-white/10 focus:outline-none focus:border-yellow-400 dark:focus:border-[#eaff00] focus:ring-1 focus:ring-yellow-400 dark:focus:ring-[#eaff00] transition-all placeholder:text-gray-400 dark:placeholder:text-gray-600"
                 />
               </div>
               
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-1.5">
                 <label className="text-[10px] md:text-xs font-bold text-[#0a0a0a]/80 dark:text-[#ffffff]/80 uppercase tracking-wider">Your Email</label>
                 <input
                   type="email"
                   name="email"
                   placeholder="john@example.com"
                   required
-                  className="w-full bg-gray-50/50 dark:bg-[#0a0a0a]/50 text-[#0a0a0a] dark:text-white p-3.5 md:p-4 text-sm md:text-base rounded-xl border border-gray-200 dark:border-white/10 focus:outline-none focus:border-yellow-400 dark:focus:border-[#eaff00] focus:ring-1 focus:ring-yellow-400 dark:focus:ring-[#eaff00] transition-all placeholder:text-gray-400 dark:placeholder:text-gray-600"
+                  className="w-full bg-gray-50/50 dark:bg-[#0a0a0a]/50 text-[#0a0a0a] dark:text-white p-3 md:p-3.5 text-xs md:text-sm rounded-xl border border-gray-200 dark:border-white/10 focus:outline-none focus:border-yellow-400 dark:focus:border-[#eaff00] focus:ring-1 focus:ring-yellow-400 dark:focus:ring-[#eaff00] transition-all placeholder:text-gray-400 dark:placeholder:text-gray-600"
                 />
               </div>
 
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-1.5">
                 <label className="text-[10px] md:text-xs font-bold text-[#0a0a0a]/80 dark:text-[#ffffff]/80 uppercase tracking-wider">Your Message</label>
                 <textarea
                   name="message"
                   placeholder="Let's build something amazing together..."
-                  rows="5"
+                  rows="4"
                   required
-                  className="w-full bg-gray-50/50 dark:bg-[#0a0a0a]/50 text-[#0a0a0a] dark:text-white p-3.5 md:p-4 text-sm md:text-base rounded-xl border border-gray-200 dark:border-white/10 focus:outline-none focus:border-yellow-400 dark:focus:border-[#eaff00] focus:ring-1 focus:ring-yellow-400 dark:focus:ring-[#eaff00] transition-all resize-none placeholder:text-gray-400 dark:placeholder:text-gray-600"
+                  className="w-full bg-gray-50/50 dark:bg-[#0a0a0a]/50 text-[#0a0a0a] dark:text-white p-3 md:p-3.5 text-xs md:text-sm rounded-xl border border-gray-200 dark:border-white/10 focus:outline-none focus:border-yellow-400 dark:focus:border-[#eaff00] focus:ring-1 focus:ring-yellow-400 dark:focus:ring-[#eaff00] transition-all resize-none placeholder:text-gray-400 dark:placeholder:text-gray-600"
                 ></textarea>
               </div>
 
               <button 
                 type="submit"
-                className="group relative flex items-center justify-center gap-3 w-full py-4 mt-2 bg-gradient-to-r from-yellow-500 to-yellow-400 dark:from-[#eaff00] dark:to-yellow-500 text-[#0a0a0a] font-black text-xs md:text-sm uppercase tracking-widest rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-300 shadow-[0_0_20px_rgba(234,255,0,0.3)]"
+                className="group relative flex items-center justify-center gap-3 w-full py-3 mt-1 bg-gradient-to-r from-yellow-500 to-yellow-400 dark:from-[#eaff00] dark:to-yellow-500 text-[#0a0a0a] font-black text-[10px] md:text-xs uppercase tracking-widest rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-300 shadow-[0_0_20px_rgba(234,255,0,0.3)]"
               >
                 <div className="absolute inset-0 bg-white/20 translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300"></div>
                 <FaPaperPlane size={14} className="relative z-10 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-300" />

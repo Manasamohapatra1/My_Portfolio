@@ -150,7 +150,7 @@ const Skill = () => {
   ]; // 4 items = 2 cols x 2 rows
 
   return (
-    <section name="skill" className="relative w-full min-h-screen flex flex-col justify-center px-6 md:px-12 overflow-hidden py-20">
+    <section name="skill" className="relative w-full min-h-screen flex flex-col justify-center px-6 md:px-12 overflow-hidden pt-24 pb-8">
       
       {/* Background Ambience */}
       <div className="absolute top-[30%] left-[10%] w-[200px] h-[200px] bg-yellow-400/5 dark:bg-[#eaff00]/5 rounded-full blur-[100px] pointer-events-none"></div>
@@ -162,7 +162,7 @@ const Skill = () => {
       <div className="max-w-7xl mx-auto w-full relative z-10 flex flex-col lg:flex-row items-center lg:items-stretch gap-10 lg:gap-16">
         
         {/* Left Side: Editorial Header */}
-        <div className="w-full lg:w-1/3 flex flex-col justify-center">
+        <div className="w-full lg:w-1/3 flex flex-col justify-start">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -186,7 +186,7 @@ const Skill = () => {
         </div>
 
         {/* Right Side: Perfectly Symmetric 2x2 Bento Box Layout */}
-        <div className="w-full lg:w-2/3 flex flex-col justify-center">
+        <div className="w-full lg:w-2/3 flex flex-col justify-start mt-4 lg:mt-0">
           <motion.div 
             variants={sectionVariants}
             initial="hidden"

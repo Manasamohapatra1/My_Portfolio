@@ -33,16 +33,16 @@ const TimelineItem = ({ title, institution, grade, status, delay }) => (
 
 const About = () => {
   return (
-    <section name="about" className="relative w-full min-h-screen flex flex-col justify-center px-6 md:px-12 overflow-hidden pt-28 pb-10">
+    <section name="about" className="relative w-full min-h-screen flex flex-col justify-center px-6 md:px-12 overflow-hidden pt-24 pb-8">
       
       {/* Background Orbs */}
       <div className="absolute top-[20%] right-[10%] w-[300px] h-[300px] bg-yellow-400/5 dark:bg-[#eaff00]/5 rounded-full blur-[100px] pointer-events-none"></div>
       <div className="absolute bottom-[10%] left-[5%] w-[200px] h-[200px] bg-yellow-400/5 dark:bg-[#eaff00]/5 rounded-full blur-[80px] pointer-events-none"></div>
 
-      <div className="max-w-7xl mx-auto w-full relative z-10 flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+      <div className="max-w-7xl mx-auto w-full relative z-10 flex flex-col lg:flex-row items-center lg:items-stretch gap-10 lg:gap-16">
         
         {/* Left Column: Header, Bio & Skills */}
-        <div className="w-full lg:w-1/2 flex flex-col justify-center">
+        <div className="w-full lg:w-1/2 flex flex-col justify-start">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -80,7 +80,7 @@ const About = () => {
         </div>
 
         {/* Right Column: Education Timeline */}
-        <div className="w-full lg:w-1/2 flex flex-col justify-center">
+        <div className="w-full lg:w-1/2 flex flex-col justify-start">
           <div className="relative flex flex-col">
             <motion.div
               initial={{ opacity: 0 }}

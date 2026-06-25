@@ -86,7 +86,7 @@ const Projects = () => {
   ];
 
   return (
-    <section name="project" className="relative w-full min-h-screen flex flex-col justify-center px-6 md:px-12 overflow-hidden py-28">
+    <section name="project" className="relative w-full min-h-screen flex flex-col justify-center px-6 md:px-12 overflow-hidden pt-24 pb-8">
       
       {/* Background Ambience */}
       <div className="absolute top-[10%] right-[10%] w-[300px] h-[300px] bg-yellow-400/5 dark:bg-[#eaff00]/5 rounded-full blur-[120px] pointer-events-none z-0"></div>
