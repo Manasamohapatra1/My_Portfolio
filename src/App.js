@@ -3,10 +3,10 @@ import React, { useContext } from "react";
 import NavBar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
-import SocialLinks from "./components/SocialLinks";
 import Projects from "./components/Project";
 import Skill from "./components/Skill";
 import Contact from "./components/ContactMe";
+import Footer from "./components/Footer";
 import ThemeContext from "./theme/ThemeContext";
 
 function App() {
@@ -21,7 +21,6 @@ function App() {
       }`}
     >
       <NavBar />
-      <SocialLinks />
       <div id="home">
         <Home />
       </div>
@@ -37,6 +36,7 @@ function App() {
       <div id="contactme">
         <Contact />
       </div>
+      <Footer />
     </div>
   );
 }
